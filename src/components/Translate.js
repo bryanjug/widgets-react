@@ -37,7 +37,7 @@ const Translate = () => {
                 label="Select a language"
             />
             <div>
-                test
+                Translated text
             </div>
         </div>
     );
