@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import ColoredText from './components/ColoredText';
 
 const items = [
     {
@@ -41,7 +42,10 @@ export default () => {
         <div>
             <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Drop Down</button>
             {showDropdown ?
-                <Dropdown options={options} selected={selected} onSelectedChange={setSelected} /> 
+                <div>
+                    <Dropdown options={options} selected={selected} onSelectedChange={setSelected} /> 
+                    <ColoredText selected={selected}/>
+                </div>
                 : null
             }
         </div>
